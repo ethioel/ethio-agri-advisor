@@ -33,7 +33,7 @@ TOKEN = "YOUR_BOT_TOKEN_HERE"  # Replace with your token
 # Ethiopian crop data
 CROP_DATA = {
     'teff': {
-        'name_am': 'ቴፍ',
+        'name_am': 'ጤፍ',
         'icon': '🌾',
         'planting': 'መጋቢት (የበልግ ዝናብ መጀመሪያ)',
         'planting_en': 'February (start of Belg rains)',
@@ -172,7 +172,7 @@ async def crop_advice(update: Update, context: ContextTypes.DEFAULT_TYPE):
 """
     
     keyboard = [
-        [InlineKeyboardButton("🌾 ቴፍ (Teff)", callback_data='crop_teff')],
+        [InlineKeyboardButton("🌾 ጤፍ (Teff)", callback_data='crop_teff')],
         [InlineKeyboardButton("🌽 በቆሎ (Maize)", callback_data='crop_maize')],
         [InlineKeyboardButton("☕ ቡና (Coffee)", callback_data='crop_coffee')],
         [InlineKeyboardButton("🌾 ስንዴ (Wheat)", callback_data='crop_wheat')],
@@ -320,7 +320,7 @@ async def yield_calculator(update: Update, context: ContextTypes.DEFAULT_TYPE):
 *Write crop type and area:*
 
 ለምሳሌ / *Example:*
-`ቴፍ 2` (ቴፍ በ2 ሄክታር)
+`ጤፍ 2` (ጤፍ በ2 ሄክታር)
 *Teff on 2 hectares*
 
 `በቆሎ 1.5` (በቆሎ በ1.5 ሄክታር)
@@ -331,7 +331,7 @@ async def yield_calculator(update: Update, context: ContextTypes.DEFAULT_TYPE):
 """
     
     keyboard = [
-        [InlineKeyboardButton("🌾 ቴፍ 1 ሄክታር / Teff 1ha", callback_data='calc_teff_1')],
+        [InlineKeyboardButton("🌾 ጤፍ 1 ሄክታር / Teff 1ha", callback_data='calc_teff_1')],
         [InlineKeyboardButton("🌽 በቆሎ 1 ሄክታር / Maize 1ha", callback_data='calc_maize_1')],
         [InlineKeyboardButton("☕ ቡና 1 ሄክታር / Coffee 1ha", callback_data='calc_coffee_1')],
         [InlineKeyboardButton("🔙 ወደ መጀመሪያ / Back", callback_data='back')]
@@ -421,7 +421,7 @@ async def community(update: Update, context: ContextTypes.DEFAULT_TYPE):
 💡 *የሌሎች ምክሮች / Other Farmers' Tips:*
 
 1️⃣ አቶ በቀለ (Oromia)
-"ቴፍ ከመትከል በፊት ዘሩን በውኃ ውስጥ ማጥለቅ ምርት ይጨምራል!"
+"ጤፍ ከመትከል በፊት ዘሩን በውኃ ውስጥ ማጥለቅ ምርት ይጨምራል!"
 *"Soak teff seeds before planting for better yield!"*
 
 2️⃣ ወ/ሮ አስናቀ (Amhara)
@@ -518,12 +518,12 @@ async def news(update: Update, context: ContextTypes.DEFAULT_TYPE):
    • Belg rains expected to start in February
 
 2️⃣ 💰 *የገበያ ዋጋዎች / Market Prices*
-   • ቴፍ: 60 ብር/ኪሎ / Teff: 60 ETB/kg
+   • ጤፍ: 60 ብር/ኪሎ / Teff: 60 ETB/kg
    • በቆሎ: 40 ብር/ኪሎ / Maize: 40 ETB/kg
    • ቡና: 120 ብር/ኪሎ / Coffee: 120 ETB/kg
 
 3️⃣ 🏆 *የሚበቃ ዘር አይነቶች / Improved Seeds*
-   • ለከፍታ አካባቢ: 'Diga' ቴፍ
+   • ለከፍታ አካባቢ: 'Diga' ጤፍ
    • ለዝቅተኛ አካባቢ: 'Melkassa' በቆሎ
 
 4️⃣ 🎓 *የስልጠና ፕሮግራሞች / Training Programs*
@@ -556,7 +556,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     # Check for yield calculation
     if 'ሄክታር' in text or 'hectare' in text.lower():
-        # Simple parsing (e.g., "teff 2" or "ቴፍ 2")
+        # Simple parsing (e.g., "teff 2" or "ጤፍ 2")
         parts = text.split()
         if len(parts) >= 2:
             try:
@@ -565,7 +565,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 
                 # Map Amharic to English
                 crop_map = {
-                    'ቴፍ': 'teff',
+                    'ጤፍ': 'teff',
                     'በቆሎ': 'maize',
                     'ቡና': 'coffee',
                     'ስንዴ': 'wheat'
@@ -609,7 +609,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Check for crop help
     crop_map = {
         'teff': 'teff',
-        'ቴፍ': 'teff',
+        'ጤፍ': 'teff',
         'maize': 'maize',
         'በቆሎ': 'maize',
         'coffee': 'coffee',
@@ -644,7 +644,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "• /start - ዋና ምናሌ / Main menu\n"
         "• /help - እርዳታ / Help\n\n"
         "💡 ሰብል ይጻፉ / *Type crop name*\n"
-        "(ቴፍ, በቆሎ, ቡና, ስንዴ)",
+        "(ጤፍ, በቆሎ, ቡና, ስንዴ)",
         parse_mode='Markdown'
     )
 
