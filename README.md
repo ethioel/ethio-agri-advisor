@@ -8,7 +8,7 @@
 
 > **Smart Agricultural Advisory System for Ethiopian Farmers** 🇪🇹
 
-[![Deploy to Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/yourusername/ethio-agri-advisor)
+[![Deploy to Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/ethioel/ethio-agri-advisor)
 [![Deploy to Railway](https://railway.app/button.svg)](https://railway.app/template/ethio-agri-advisor)
 
 ---
